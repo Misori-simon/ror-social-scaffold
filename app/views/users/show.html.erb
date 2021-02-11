@@ -1,5 +1,19 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
+    <% if current_user.available_for_request?(@user) %>
+      <span class="profile-link">
+        <%= link_to 'Request Friend',  new_request_path(friend_id: @user.id), class: 'profile-link' %>
+      </span>
+    <% elsif @user.already_sent_request?(current_user) %>
+      <span class="profile-link">
+        Pending
+      </span>
+    <% elsif current_user.already_sent_request?(@user) %>
+      <span class="profile-link">
+        <%= link_to 'Accept Friend',  accept_request_path(friend_id: user.id), class: 'profile-link' %>
+        <%= link_to 'Decline Friend',  decline_request_path(friend_id: user.id), class: 'profile-link' %>
+      </span>
+    <% end %>
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">

@@ -3,8 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    current_user_posts
-    friends_post
+    timeline_posts
   end
 
   def create
@@ -20,12 +19,8 @@ class PostsController < ApplicationController
 
   private
 
-  def current_user_posts
-    @my_posts = current_user.posts.order(created_at: :desc)
-  end
-
-  def friends_post
-    @my_freinds_posts = Post.where(id: current_user.friends_group.map(&:id)).order(created_at: :desc)
+  def timeline_posts
+    @timeline_posts ||= Post.user_and_friends(current_user).ordered_by_most_recent
   end
 
   def post_params

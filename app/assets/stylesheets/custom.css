@@ -294,7 +294,6 @@ form .actions.reset input[type="submit"] {
 .timeline .post-comments-section .post-comments {
   position: relative;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #bdbdbd;
   border-radius: 3px;
@@ -363,6 +362,7 @@ form .actions.reset input[type="submit"] {
   form {
     width: 60%;
   }
+
   .new_post,
   .timeline,
   .users-section,
@@ -375,6 +375,7 @@ form .actions.reset input[type="submit"] {
   form {
     width: 40%;
   }
+
   .new_post,
   .timeline,
   .users-section,
@@ -382,4 +383,5 @@ form .actions.reset input[type="submit"] {
     width: 50%;
   }
 }
+
 /*# sourceMappingURL=custom.css.map */

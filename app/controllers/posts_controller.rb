@@ -19,8 +19,17 @@ class PostsController < ApplicationController
 
   private
 
+  def current_user_posts
+    current_user.posts
+  end
+
+  def friends_post
+    current_user.posts_from_friends
+  end
+
   def timeline_posts
-    @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user)
+    # @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user)
+    @timeline_posts ||= (current_user_posts + friends_post)
   end
 
   def post_params

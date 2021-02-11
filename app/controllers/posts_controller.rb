@@ -21,11 +21,11 @@ class PostsController < ApplicationController
   private
 
   def current_user_posts
-    @my_posts = current_user.posts
+    @my_posts = current_user.posts.order(created_at: :desc)
   end
 
   def friends_post
-    @my_freinds_posts = current_user.posts_from_friends
+    @my_freinds_posts = Post.where(id: current_user.friends_group.map(&:id)).order(created_at: :desc)
   end
 
   def post_params

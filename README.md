@@ -11,11 +11,13 @@
 
 
 ## Live Demo
-[LIVE LINK]()
 
-![](./app/assets/images/Screenshot_2021-02-12 RorSocialScaffold.png)
--
-![](./app/assets/images/Screenshot_2021-02-12 RorSocialScaffold(1).png)
+
+### Home
+![](./app/assets/images/Screenshot_2021-02-12home.png)
+
+### User
+![](./app/assets/images/Screenshot_2021-02-12user.png)
 
 ## Getting Started
 

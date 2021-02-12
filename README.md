@@ -71,7 +71,11 @@ TBA
 
 ## Authors
 
-TBA
+👤 **Misori Simon**
+
+- GitHub: [@Misori-simon](https://github.com/Misori-simon)
+- Twitter: [@Misori-simon](https://github.com/misori_simon)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/misori-simon-05906219b/)
 
 ## 🤝 Contributing
 
@@ -84,10 +88,10 @@ Feel free to check the [issues page](issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
-TBA
+Credits go to The Odin Project for providing essential guidance and an opportunity to build this amazing project
+- [The Odin Project]https://theodinproject.com/)
 
 ## 📝 License
 
-TBA
-
+Rails guides
+- [Rails Guides](https://guides.rubyonrails.org/)

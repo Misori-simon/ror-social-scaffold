@@ -33,4 +33,18 @@ RSpec.describe Friendship, type: :model do
     friendship = current_user.friendships.create(friend: friend)
     expect(friendship.user).to eql(current_user)
   end
+
+  it 'Test if duplicate freindship can be created' do
+    friendship = current_user.friendships.create(friend: friend)
+    friendship_duplicate = Friendship.new(user: current_user, friend: friend).save
+    expect(friendship.user).to eql(current_user)
+    expect(friendship_duplicate).to be false
+  end
+
+  it 'Test if friendship can be created again in the reversed order between same user pair' do
+    friendship = current_user.friendships.create(friend: friend)
+    friendship_reverse = Friendship.new(friend: friend, user: current_user).save
+    expect(friendship.user).to eql(current_user)
+    expect(friendship_reverse).to be false
+  end
 end
